@@ -1,0 +1,35 @@
+<div class="job-listing">
+  <h1>{{ jobListing.title }} at {{ jobListing.company.name }}</h1>
+  <p>
+    <strong>Location:</strong> {{ jobListing.location.city }},
+    {{ jobListing.location.state }}, {{ jobListing.location.country }}
+  </p>
+  <p><strong>Job Type:</strong> {{ jobListing.jobType }}</p>
+  <p><strong>Experience Level:</strong> {{ jobListing.experienceLevel }}</p>
+  <p><strong>Education Required:</strong> {{ jobListing.educationRequired }}</p>
+  <h2>Responsibilities:</h2>
+  <ul>
+    <li *ngFor="let responsibility of jobListing.responsibilities">
+      {{ responsibility }}
+    </li>
+  </ul>
+  <h2>Required Skills:</h2>
+  <ul>
+    <li *ngFor="let skill of jobListing.requiredSkills">{{ skill }}</li>
+  </ul>
+  <h2>Preferred Skills:</h2>
+  <ul>
+    <li *ngFor="let skill of jobListing.preferredSkills">{{ skill }}</li>
+  </ul>
+  <p>
+    <strong>Salary Range:</strong> {{ jobListing.salary.currency
+    }}{{ jobListing.salary.min }} - {{ jobListing.salary.max }}
+  </p>
+  <h2>Benefits:</h2>
+  <ul>
+    <li *ngFor="let benefit of jobListing.benefits">{{ benefit }}</li>
+  </ul>
+  <p>
+    <strong>Application Deadline:</strong> {{ jobListing.applicationDeadline }}
+  </p>
+</div>

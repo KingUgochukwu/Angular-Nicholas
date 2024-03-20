@@ -1,0 +1,35 @@
+.job-listing {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.job-listing h1,
+.job-listing h2 {
+  color: #333;
+}
+
+.job-listing p,
+.job-listing li {
+  color: #666;
+}
+
+.job-listing ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.job-listing ul li::before {
+  content: '•';
+  color: #007bff;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.job-listing p strong {
+  color: #000;
+}
